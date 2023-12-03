@@ -36,6 +36,12 @@
     </td>
 
   </tr>
+  <td class="evenRow">
+         <s:text name="form.price.message"/>
+         <s:textfield id="price" name="invoiceBean.price" />
+      </td>
+
+    </tr>
   <tr>
     <td class="evenRow">
         <s:submit align="left" value="Enviar"/>

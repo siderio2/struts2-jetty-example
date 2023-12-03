@@ -13,5 +13,32 @@
 
     <h1>Resumen de factura: </h1>
 
+    <table>
+      <tr>
+        <td class="evenRow">
+          <s:text name="form.subject.message"/>
+          <s:property value="invoiceBean.subject"/>
+        </td>
+      </tr>
+      <tr>
+        <td class="evenRow">
+          <s:text name="form.fromDate.message"/>
+          <s:property value="invoiceBean.dateFrom"/>
+        </td>
+      </tr>
+      <tr>
+        <td class="evenRow">
+          <s:text name="form.toDate.message"/>
+          <s:property value="invoiceBean.dateTo"/>
+        </td>
+      </tr>
+      <tr>
+        <td class="evenRow">
+          <s:text name="form.price.message"/>
+          <s:property value="invoiceBean.price"/>
+        </td>
+      </tr>
+    </table>
+
 </body>
 </html>
