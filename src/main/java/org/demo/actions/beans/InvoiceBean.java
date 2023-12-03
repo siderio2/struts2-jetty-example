@@ -9,33 +9,33 @@ public class InvoiceBean {
     private Date dateTo;
     private double price;
 
-    public Date getDateFrom() {
-        return dateFrom;
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
     public void setDateFrom(Date dateFrom) {
         this.dateFrom = dateFrom;
     }
 
+    public void setDateTo(Date dateTo) { this.dateTo = dateTo; }
+
+    public void setPrice(double price) { this.price = price; }
+
+    public String getSubject() { return subject; }
+
     public Date getDateTo() {
         return dateTo;
     }
 
-    public void setDateTo(Date dateTo) {
-        this.dateTo = dateTo;
+    public Date getDateFrom() {
+        return dateFrom;
     }
 
-    public String getSubject() {
-        return subject;
+    public double getPrice() { return  price; }
+    
+    public String getTotal() {
+        double total = price * 1.21;
+        return String.format("%.2f", total);
     }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
-    }
-
-    public double getPrice() { return  this.price; }
-
-    public void setPrice(double price) { this.price = price; }
 }
-
 

@@ -34,11 +34,13 @@
       </tr>
       <tr>
         <td class="evenRow">
-          <s:text name="form.price.message"/>
-          <s:property value="invoiceBean.price"/>
+          <s:text name="wellcome.total.message"/>
+          <s:property value="invoiceBean.getTotal()"/>
         </td>
       </tr>
     </table>
+
+
 
 </body>
 </html>
