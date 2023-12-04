@@ -32,7 +32,8 @@ public class InvoiceBean {
     }
 
     public double getPrice() { return  price; }
-    
+
+    // método que calcula el total con IVA del 21% y lo entrega en forma de string con sólo dos decimales.
     public String getTotal() {
         double total = price * 1.21;
         return String.format("%.2f", total);
