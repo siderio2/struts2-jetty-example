@@ -32,6 +32,7 @@
     </tr>
   <tr>
     <td class="evenRow">
+       <s:fielderror fieldName = "invoiceBean.dateTo" />
        <s:text name="form.toDate.message"/>
        <sx:datetimepicker id="dateTo" name="invoiceBean.dateTo" />
     </td>

@@ -28,5 +28,8 @@ public class InvoiceAction extends ActionSupport  {
         if (invoiceBean.getDateFrom() == null) {
             addFieldError("invoiceBean.dateFrom", "La Fecha inicial es obligatoria");
         }
+        if (invoiceBean.getDateTo() == null) {
+            addFieldError("invoiceBean.dateTo", "La Fecha final es obligatoria");
+        }
     }
 }
