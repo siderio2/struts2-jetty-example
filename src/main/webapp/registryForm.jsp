@@ -39,6 +39,7 @@
 
   </tr>
   <td class="evenRow">
+         <s:fielderror fieldName = "invoiceBean.price" />
          <s:text name="form.price.message"/>
          <s:textfield id="price" name="invoiceBean.price" />
       </td>

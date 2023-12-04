@@ -23,13 +23,27 @@ public class InvoiceAction extends ActionSupport  {
     @Override
     public void validate() {
         if (invoiceBean.getSubject().isEmpty()) {
-            addFieldError("invoiceBean.subject", "El concepto es obligatorio.");
+            addFieldError("invoiceBean.subject", getText("error.subject"));
         }
+        // dateFrom required
         if (invoiceBean.getDateFrom() == null) {
-            addFieldError("invoiceBean.dateFrom", "La Fecha inicial es obligatoria");
+            addFieldError("invoiceBean.dateFrom", getText("error.dateFrom"));
         }
+        // dateTo required
         if (invoiceBean.getDateTo() == null) {
-            addFieldError("invoiceBean.dateTo", "La Fecha final es obligatoria");
+            addFieldError("invoiceBean.dateTo", getText("error.dateTo.required"));
+        }
+        // dateTo >= dateFrom
+        if (invoiceBean.getDateFrom() != null && invoiceBean.getDateTo() != null &&  invoiceBean.getDateTo().before(invoiceBean.getDateFrom())) {
+            addFieldError("invoiceBean.dateTo", getText("error.dateTo.before"));
+        }
+        // price required
+        if (invoiceBean.getPrice() == 0) {
+            addFieldError("invoiceBean.price", getText("error.price.required"));
+        }
+        // price número positivo
+        if (invoiceBean.getPrice() < 0) {
+            addFieldError("invoiceBean.price", getText("error.price.negative"));
         }
     }
 }
