@@ -5,6 +5,7 @@
 <html>
 <head>
   <title><s:text name="hello.message"/></title>
+  <link rel="stylesheet" href="css/estilos.css">
   <s:head/>
   <sx:head/>
 </head>
